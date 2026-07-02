@@ -1,0 +1,84 @@
+/* ============================================================
+   CELESNITY · COLOR TOKENS
+   Two skies, one identity. A cosmic dark mode (Cosmos) and a
+   warm daybreak light mode (Daybreak) sharing one accent spine.
+   ============================================================ */
+
+:root {
+  /* ---------- Dark mode · Cosmos (base palette) ---------- */
+  --cosmic-black:   #05060F; /* primary surface — the night sky   */
+  --deep-indigo:    #1A0E4D; /* raised surface                    */
+  --cobalt-blue:    #2D44E0; /* primary accent                    */
+  --violet:         #6E1FC6; /* secondary accent                  */
+  --nebula-magenta: #B14FD0; /* highlight                         */
+  --starlight:      #C9CEE8; /* text on dark                      */
+
+  /* ---------- Light mode · Daybreak (base palette) ---------- */
+  --cloud-white:    #F8F9FE; /* primary background · 60%          */
+  --lavender-mist:  #EEECF8; /* surface / cards · 30%             */
+  --ink:            #1C2240; /* text on light                     */
+  /* cobalt-blue is shared as the light primary accent (10%)      */
+  --violet-day:     #8739E0; /* light secondary accent            */
+  --magenta-day:    #BC67D5; /* light highlight                   */
+
+  /* ---------- Signature gradients ---------- */
+  --nebula-gradient:   linear-gradient(120deg, #2D44E0 0%, #6E1FC6 52%, #B14FD0 100%); /* @kind color */
+  --daybreak-gradient: linear-gradient(120deg, #2D44E0 0%, #8739E0 52%, #BC67D5 100%); /* @kind color */
+  /* the deep cosmic hero wash used behind logos & hero cards      */
+  --cosmos-wash: radial-gradient(120% 140% at 18% 12%, #241660 0%, #12093B 45%, #05060F 100%); /* @kind color */
+
+  /* ---------- Supporting tints (derived, for borders/strokes) ---------- */
+  --hairline-dark:  rgba(201, 206, 232, 0.12); /* borders on cosmic surfaces */
+  --hairline-light: rgba(28, 34, 64, 0.10);    /* borders on daybreak surfaces */
+  --starlight-dim:  rgba(201, 206, 232, 0.62);  /* muted text on dark */
+  --ink-dim:        rgba(28, 34, 64, 0.60);     /* muted text on light */
+}
+
+/* ============================================================
+   SEMANTIC ALIASES — theme-scoped
+   Default (:root) = Cosmos / dark. .daybreak flips to light.
+   Reference these in components, never the raw palette.
+   ============================================================ */
+
+:root,
+.cosmos {
+  --bg-base:        var(--cosmic-black);
+  --bg-raised:      var(--deep-indigo);
+  --surface-card:   rgba(255, 255, 255, 0.04);
+  --surface-hover:  rgba(255, 255, 255, 0.07);
+  --border-subtle:  var(--hairline-dark);
+
+  --text-primary:   #F8F9FE;
+  --text-secondary: var(--starlight);
+  --text-muted:     var(--starlight-dim);
+  --text-on-accent: #FFFFFF;
+
+  --accent:         var(--cobalt-blue);
+  --accent-2:       var(--violet);
+  --accent-3:       var(--nebula-magenta);
+  --gradient-brand: var(--nebula-gradient);
+  --hero-wash:      var(--cosmos-wash);
+
+  --focus-ring:     rgba(45, 68, 224, 0.55);
+}
+
+.daybreak {
+  --bg-base:        var(--cloud-white);
+  --bg-raised:      #FFFFFF;
+  --surface-card:   var(--lavender-mist);
+  --surface-hover:  #E6E3F4;
+  --border-subtle:  var(--hairline-light);
+
+  --text-primary:   var(--ink);
+  --text-secondary: rgba(28, 34, 64, 0.78);
+  --text-muted:     var(--ink-dim);
+  --text-on-accent: #FFFFFF;
+
+  --accent:         var(--cobalt-blue);
+  --accent-2:       var(--violet-day);
+  --accent-3:       var(--magenta-day);
+  --gradient-brand: var(--daybreak-gradient);
+  --hero-wash:      var(--cosmos-wash);
+
+  --focus-ring:     rgba(45, 68, 224, 0.35);
+}

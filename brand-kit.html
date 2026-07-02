@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="cosmos">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Celesnity · Brand Kit</title>
+<meta name="description" content="Download the Celesnity brand assets — logos, fonts, colors, gradients and design tokens.">
+<link rel="icon" type="image/png" href="assets/assets/logo-mark-white.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Cosmos palette */
+  --cosmic-black:#05060F; --deep-indigo:#1A0E4D; --cobalt-blue:#2D44E0;
+  --violet:#6E1FC6; --nebula-magenta:#B14FD0; --starlight:#C9CEE8;
+  --cloud-white:#F8F9FE; --lavender-mist:#EEECF8; --ink:#1C2240;
+  --violet-day:#8739E0; --magenta-day:#BC67D5;
+
+  --nebula-gradient:linear-gradient(120deg,#2D44E0 0%,#6E1FC6 52%,#B14FD0 100%);
+  --daybreak-gradient:linear-gradient(120deg,#2D44E0 0%,#8739E0 52%,#BC67D5 100%);
+  --cosmos-wash:radial-gradient(120% 140% at 18% 12%,#241660 0%,#12093B 45%,#05060F 100%);
+
+  --bg-base:var(--cosmic-black);
+  --surface:rgba(255,255,255,.04);
+  --surface-hover:rgba(255,255,255,.07);
+  --border:rgba(201,206,232,.12);
+  --text-primary:#F8F9FE;
+  --text-secondary:var(--starlight);
+  --text-muted:rgba(201,206,232,.62);
+
+  --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius-md:16px; --radius-lg:20px; --radius-xl:28px; --radius-pill:999px;
+  --glow-accent:0 10px 40px rgba(45,68,224,.35);
+  --shadow-cosmos:0 24px 60px rgba(0,0,0,.55);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--font-sans);
+  background:var(--bg-base);
+  color:var(--text-primary);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  background:var(--cosmos-wash);
+  padding:96px 0 72px;
+  border-bottom:1px solid var(--border);
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(2px 2px at 20% 30%,rgba(255,255,255,.5),transparent),
+             radial-gradient(1.5px 1.5px at 70% 20%,rgba(255,255,255,.35),transparent),
+             radial-gradient(2px 2px at 85% 65%,rgba(201,206,232,.4),transparent),
+             radial-gradient(1px 1px at 40% 80%,rgba(255,255,255,.3),transparent),
+             radial-gradient(1.5px 1.5px at 55% 45%,rgba(177,79,208,.5),transparent);
+}
+.hero .wrap{position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+.brand img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 6px 20px rgba(45,68,224,.5))}
+.brand .word{font-weight:700;font-size:26px;letter-spacing:-.02em}
+.eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--text-muted);margin:0 0 18px;
+}
+.hero h1{
+  font-size:clamp(40px,7vw,72px);font-weight:700;line-height:1.02;letter-spacing:-.03em;
+  margin:0 0 20px;max-width:16ch;
+}
+.hero h1 .grad{
+  background:var(--nebula-gradient);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p.lead{font-size:20px;color:var(--text-secondary);max-width:56ch;margin:0 0 32px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:14px 24px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:none;
+  transition:transform .14s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease);
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--nebula-gradient);color:#fff;box-shadow:var(--glow-accent)}
+.btn-primary:hover{box-shadow:0 14px 50px rgba(45,68,224,.5)}
+.btn-ghost{background:var(--surface);color:var(--text-primary);border:1px solid var(--border)}
+.btn-ghost:hover{background:var(--surface-hover)}
+
+/* ---------- Sections ---------- */
+section{padding:72px 0;border-bottom:1px solid var(--border)}
+.sec-head{margin-bottom:36px}
+.sec-head h2{font-size:32px;font-weight:600;letter-spacing:-.015em;margin:0 0 8px}
+.sec-head p{color:var(--text-muted);margin:0;font-size:16px}
+
+/* ---------- Logo cards ---------- */
+.logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.logo-card{
+  border-radius:var(--radius-xl);border:1px solid var(--border);overflow:hidden;
+  display:flex;flex-direction:column;
+}
+.logo-preview{height:200px;display:flex;align-items:center;justify-content:center}
+.logo-preview.dark{background:var(--cosmos-wash)}
+.logo-preview.light{background:var(--cloud-white)}
+.logo-preview img{width:96px;height:96px;object-fit:contain}
+.logo-meta{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface)}
+.logo-meta .t{font-weight:600;font-size:15px}
+.logo-meta .s{font-size:13px;color:var(--text-muted)}
+.dl{
+  display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:var(--radius-pill);
+  background:var(--cobalt-blue);color:#fff;text-decoration:none;font-size:13px;font-weight:600;
+  white-space:nowrap;transition:transform .14s var(--ease),background .2s;
+}
+.dl:hover{background:#3a51ff}
+.dl:active{transform:scale(.97)}
+.dl.alt{background:var(--surface);border:1px solid var(--border)}
+.dl.alt:hover{background:var(--surface-hover)}
+
+/* ---------- Colors ---------- */
+.pal-label{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin:0 0 16px}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-bottom:40px}
+.swatch{
+  border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden;cursor:pointer;
+  background:var(--surface);transition:transform .14s var(--ease),box-shadow .22s var(--ease);
+  text-align:left;padding:0;font-family:inherit;color:inherit;
+}
+.swatch:hover{transform:translateY(-3px);box-shadow:var(--shadow-cosmos)}
+.swatch .chip{height:88px;display:block}
+.swatch .info{padding:12px 14px}
+.swatch .name{font-size:13px;font-weight:600;display:block}
+.swatch .hex{font-size:12px;color:var(--text-muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase}
+
+/* ---------- Gradients ---------- */
+.grad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.grad-card{border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;cursor:pointer;background:var(--surface)}
+.grad-card:hover{box-shadow:var(--shadow-cosmos)}
+.grad-swatch{height:120px}
+.grad-info{padding:14px 16px}
+.grad-info .name{font-weight:600;font-size:15px}
+.grad-info code{display:block;margin-top:6px;font-size:11.5px;color:var(--text-muted);font-family:ui-monospace,Menlo,monospace;word-break:break-all}
+
+/* ---------- Type ---------- */
+.type-card{border-radius:var(--radius-xl);border:1px solid var(--border);background:var(--surface);padding:32px 34px}
+.type-specimen{font-size:clamp(48px,8vw,96px);font-weight:700;letter-spacing:-.03em;line-height:1;margin:0 0 8px}
+.weights{display:flex;flex-wrap:wrap;gap:22px;margin:24px 0;padding:22px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.weights span{font-size:22px}
+.scale-row{display:flex;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px dashed var(--border)}
+.scale-row:last-child{border-bottom:none}
+.scale-row .lbl{font-size:12px;color:var(--text-muted);width:110px;font-family:ui-monospace,Menlo,monospace}
+.scale-row .demo{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- Downloads ---------- */
+.dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.dl-tile{
+  display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:var(--radius-md);
+  border:1px solid var(--border);background:var(--surface);text-decoration:none;color:inherit;
+  transition:transform .14s var(--ease),background .2s;
+}
+.dl-tile:hover{background:var(--surface-hover);transform:translateY(-2px)}
+.dl-tile .ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--nebula-gradient);flex-shrink:0}
+.dl-tile .t{font-weight:600;font-size:14px}
+.dl-tile .s{font-size:12px;color:var(--text-muted)}
+
+footer{padding:48px 0;text-align:center;color:var(--text-muted);font-size:14px}
+footer a{color:var(--text-secondary)}
+
+/* ---------- Toast ---------- */
+#toast{
+  position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);
+  background:var(--nebula-gradient);color:#fff;padding:13px 24px;border-radius:var(--radius-pill);
+  font-weight:600;font-size:14px;box-shadow:var(--glow-accent);opacity:0;pointer-events:none;
+  transition:opacity .25s var(--ease),transform .25s var(--ease);z-index:99;
+}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.hint{font-size:12px;color:var(--text-muted);margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/assets/logo-mark-white.png" alt="Celesnity mark">
+      <span class="word">Celesnity</span>
+    </div>
+    <p class="eyebrow">Brand & Design System</p>
+    <h1>The <span class="grad">Celesnity</span> Brand Kit</h1>
+    <p class="lead">Everything you need to build in our universe — logos, the Inter typeface, colors, gradients and design tokens. Click any color to copy it, or grab the full kit below.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="Celesnity Design System Gradient.zip" download>⬇ Download full kit (.zip)</a>
+      <a class="btn btn-ghost" href="index.html">View the app ↗</a>
+    </div>
+  </div>
+</header>
+
+<!-- LOGOS -->
+<section id="logos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Logo</h2>
+      <p>The orbit-and-spark mark. Use the white mark on cosmic/dark surfaces, the ink mark on light. 2000×2000 PNG, transparent.</p>
+    </div>
+    <div class="logo-grid">
+      <div class="logo-card">
+        <div class="logo-preview dark"><img src="assets/assets/logo-mark-white.png" alt="White logo mark"></div>
+        <div class="logo-meta">
+          <div><div class="t">Mark · White</div><div class="s">On dark surfaces</div></div>
+          <a class="dl" href="assets/assets/logo-mark-white.png" download>⬇ PNG</a>
+        </div>
+      </div>
+      <div class="logo-card">
+        <div class="logo-preview light"><img src="assets/assets/logo-mark-ink.png" alt="Ink logo mark"></div>
+        <div class="logo-meta">
+          <div><div class="t">Mark · Ink</div><div class="s">On light surfaces</div></div>
+          <a class="dl" href="assets/assets/logo-mark-ink.png" download>⬇ PNG</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLORS -->
+<section id="colors">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Colors</h2>
+      <p>Two skies, one identity. Click any swatch to copy its hex.</p>
+    </div>
+
+    <p class="pal-label">Cosmos · Dark</p>
+    <div class="swatches" id="cosmos-swatches"></div>
+
+    <p class="pal-label">Daybreak · Light</p>
+    <div class="swatches" id="daybreak-swatches"></div>
+  </div>
+</section>
+
+<!-- GRADIENTS -->
+<section id="gradients">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Signature Gradients</h2>
+      <p>Click a gradient to copy its CSS.</p>
+    </div>
+    <div class="grad-grid" id="grad-grid"></div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section id="type">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Typography</h2>
+      <p>Celesnity ships entirely in <strong>Inter</strong> — one family, from calm body to confident display.</p>
+    </div>
+    <div class="type-card">
+      <p class="type-specimen">Aa</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+        <a class="dl" href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">⬇ Get Inter (Google Fonts)</a>
+        <button class="dl alt" data-copy="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">⧉ Copy font-family</button>
+        <button class="dl alt" data-copy="@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400..700&display=swap');">⧉ Copy @import</button>
+      </div>
+      <div class="weights">
+        <span style="font-weight:300">Light 300</span>
+        <span style="font-weight:400">Regular 400</span>
+        <span style="font-weight:500">Medium 500</span>
+        <span style="font-weight:600">Semibold 600</span>
+        <span style="font-weight:700">Bold 700</span>
+      </div>
+      <div id="scale"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
+<section id="downloads">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Design Tokens & Files</h2>
+      <p>Grab the raw token CSS or the complete design system.</p>
+    </div>
+    <div class="dl-grid">
+      <a class="dl-tile" href="Celesnity Design System Gradient.zip" download>
+        <span class="ico">📦</span><span><span class="t">Full Design System</span><br><span class="s">Everything · .zip</span></span></a>
+      <a class="dl-tile" href="assets/tokens/colors.css" download>
+        <span class="ico">🎨</span><span><span class="t">colors.css</span><br><span class="s">Color tokens</span></span></a>
+      <a class="dl-tile" href="assets/tokens/typography.css" download>
+        <span class="ico">🔤</span><span><span class="t">typography.css</span><br><span class="s">Type tokens</span></span></a>
+      <a class="dl-tile" href="assets/tokens/spacing.css" download>
+        <span class="ico">📐</span><span><span class="t">spacing.css</span><br><span class="s">Spacing & radii</span></span></a>
+      <a class="dl-tile" href="assets/tokens/effects.css" download>
+        <span class="ico">✨</span><span><span class="t">effects.css</span><br><span class="s">Shadows & glow</span></span></a>
+      <a class="dl-tile" href="assets/tokens/fonts.css" download>
+        <span class="ico">Aa</span><span><span class="t">fonts.css</span><br><span class="s">Font import</span></span></a>
+      <a class="dl-tile" href="assets/styles.css" download>
+        <span class="ico">🧩</span><span><span class="t">styles.css</span><br><span class="s">Full stylesheet</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Celesnity Brand Kit · <a href="https://github.com/celesnity/celesnity-brand-kit">github.com/celesnity</a><br>
+    Two skies, one identity.
+  </div>
+</footer>
+
+<div id="toast">Copied!</div>
+
+<script>
+const cosmos=[
+  ['Cosmic Black','#05060F'],['Deep Indigo','#1A0E4D'],['Cobalt Blue','#2D44E0'],
+  ['Violet','#6E1FC6'],['Nebula Magenta','#B14FD0'],['Starlight','#C9CEE8'],
+];
+const daybreak=[
+  ['Cloud White','#F8F9FE'],['Lavender Mist','#EEECF8'],['Ink','#1C2240'],
+  ['Cobalt Blue','#2D44E0'],['Violet Day','#8739E0'],['Magenta Day','#BC67D5'],
+];
+const grads=[
+  ['Nebula','linear-gradient(120deg, #2D44E0 0%, #6E1FC6 52%, #B14FD0 100%)'],
+  ['Daybreak','linear-gradient(120deg, #2D44E0 0%, #8739E0 52%, #BC67D5 100%)'],
+  ['Cosmos Wash','radial-gradient(120% 140% at 18% 12%, #241660 0%, #12093B 45%, #05060F 100%)'],
+];
+const scale=[
+  ['Display · 72',72,700],['H1 · 48',48,600],['H2 · 32',32,500],
+  ['H3 · 24',24,600],['Lead · 20',20,400],['Body · 18',18,400],['Small · 15',15,400],
+];
+
+let toastTimer;
+function toast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),1400);
+}
+async function copy(text,label){
+  try{await navigator.clipboard.writeText(text);}
+  catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();}
+  toast((label||'Copied')+' ✓');
+}
+
+function swatch([name,hex]){
+  const dark=parseInt(hex.slice(1),16)<0x888888;
+  const b=document.createElement('button');
+  b.className='swatch';
+  b.innerHTML=`<span class="chip" style="background:${hex}"></span>
+    <span class="info"><span class="name">${name}</span><span class="hex">${hex}</span></span>`;
+  b.onclick=()=>copy(hex,hex);
+  return b;
+}
+cosmos.forEach(c=>document.getElementById('cosmos-swatches').appendChild(swatch(c)));
+daybreak.forEach(c=>document.getElementById('daybreak-swatches').appendChild(swatch(c)));
+
+grads.forEach(([name,css])=>{
+  const d=document.createElement('div');
+  d.className='grad-card';
+  d.innerHTML=`<div class="grad-swatch" style="background:${css}"></div>
+    <div class="grad-info"><span class="name">${name}</span><code>${css}</code></div>`;
+  d.onclick=()=>copy(css,name+' gradient');
+  document.getElementById('grad-grid').appendChild(d);
+});
+
+scale.forEach(([lbl,size,weight])=>{
+  const r=document.createElement('div');
+  r.className='scale-row';
+  r.innerHTML=`<span class="lbl">${lbl}</span>
+    <span class="demo" style="font-size:${Math.min(size,40)}px;font-weight:${weight};letter-spacing:${size>=32?'-.02em':'0'}">Beneath a billion stars</span>`;
+  document.getElementById('scale').appendChild(r);
+});
+
+document.querySelectorAll('[data-copy]').forEach(el=>{
+  el.addEventListener('click',()=>copy(el.dataset.copy,'Copied'));
+});
+</script>
+</body>
+</html>
