@@ -128,10 +128,8 @@ a{color:inherit}
 .hero p.lead{font-size:20px;color:var(--hero-lead);max-width:56ch;margin:0 0 32px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:var(--radius-pill);font-weight:600;font-size:15px;text-decoration:none;cursor:pointer;border:none;transition:transform .14s var(--ease),box-shadow .22s var(--ease),background .22s var(--ease)}
-.btn:hover{transform:translateY(-2px)}
 .btn:active{transform:scale(.97)}
-.btn-primary{background:var(--gradient-brand);color:#fff;box-shadow:var(--glow-accent)}
-.btn-primary:hover{box-shadow:0 16px 54px rgba(45,68,224,.5)}
+.btn-primary{background:var(--gradient-brand);color:#fff}
 .btn-ghost{background:var(--surface);color:var(--text-primary);border:1px solid var(--border)}
 .btn-ghost:hover{background:var(--surface-hover)}
 
@@ -155,28 +153,26 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 
 /* ---------- Component demos ---------- */
 .demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.demo-card{border-radius:var(--radius-xl);border:1px solid var(--border);background:var(--surface);padding:26px 28px;transition:transform .18s var(--ease),box-shadow .22s var(--ease)}
-.demo-card:hover{transform:translateY(-4px);box-shadow:var(--elevation)}
+.demo-card{border-radius:var(--radius-xl);border:1px solid var(--border);background:var(--surface);padding:26px 28px;transition:background .22s var(--ease)}
+.demo-card:hover{background:var(--surface-hover)}
 .demo-card h3{margin:0 0 4px;font-size:16px;font-weight:600}
 .demo-card .cap{margin:0 0 20px;font-size:13px;color:var(--text-muted)}
 .demo-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
 /* buttons */
-.c-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:600;letter-spacing:-.01em;line-height:1;border-radius:var(--radius-pill);border:1px solid transparent;cursor:pointer;padding:13px 24px;font-size:15px;transition:transform .14s var(--ease),box-shadow .22s var(--ease),background .2s,filter .2s}
-.c-btn:hover{transform:translateY(-2px)}
+.c-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;font-weight:600;letter-spacing:-.01em;line-height:1;border-radius:var(--radius-pill);border:none;cursor:pointer;padding:13px 24px;font-size:15px;transition:transform .14s var(--ease),box-shadow .22s var(--ease),background .2s,filter .2s}
 .c-btn:active{transform:scale(.97)}
-.c-btn.primary{background:var(--gradient-brand);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.32)}
+.c-btn.primary{background:var(--gradient-brand);color:#fff}
 .c-btn.primary:hover{filter:brightness(1.08)}
 .c-btn.secondary{background:var(--surface-hover);color:var(--text-primary);border-color:var(--border)}
 .c-btn.ghost{background:transparent;color:var(--text-secondary)}
 .c-btn.ghost:hover{background:var(--surface-hover)}
-.c-btn.accent{background:var(--cobalt-blue);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.32)}
+.c-btn.accent{background:var(--cobalt-blue);color:#fff}
 .c-btn.sm{padding:9px 16px;font-size:14px}
 .c-btn.lg{padding:17px 32px;font-size:17px}
 
 /* badges */
-.badge{display:inline-flex;align-items:center;gap:6px;font-family:inherit;font-weight:600;font-size:12.5px;letter-spacing:.01em;line-height:1;padding:5px 12px;border-radius:var(--radius-pill);white-space:nowrap}
-.badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor}
+.badge{display:inline-flex;align-items:center;font-family:inherit;font-weight:600;font-size:12.5px;letter-spacing:.01em;line-height:1;padding:5px 12px;border-radius:var(--radius-pill);white-space:nowrap}
 .badge.neutral{background:var(--surface-hover);color:var(--text-secondary);border:1px solid var(--border)}
 .badge.cobalt{background:rgba(45,68,224,.16);color:#6f83ff;border:1px solid rgba(45,68,224,.30)}
 .badge.violet{background:rgba(110,31,198,.18);color:#a97fef;border:1px solid rgba(110,31,198,.32)}
@@ -192,7 +188,7 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 /* switch */
 .switch{position:relative;display:inline-flex;align-items:center;gap:12px;cursor:pointer;user-select:none;font-size:15px}
 .switch input{position:absolute;opacity:0;width:0;height:0}
-.track{width:52px;height:30px;border-radius:var(--radius-pill);background:var(--surface-hover);border:1px solid var(--border);position:relative;transition:background .25s var(--ease)}
+.track{width:52px;height:30px;border-radius:var(--radius-pill);background:var(--surface-hover);position:relative;transition:background .25s var(--ease)}
 .track::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.35);transition:transform .25s var(--ease)}
 .switch input:checked+.track{background:var(--gradient-brand)}
 .switch input:checked+.track::after{transform:translateX(22px)}
@@ -226,12 +222,12 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 
 /* ---------- Logo + Do/Don't ---------- */
 .logo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.logo-card{border-radius:var(--radius-xl);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;transition:transform .18s var(--ease),box-shadow .22s var(--ease)}
-.logo-card:hover{transform:translateY(-4px);box-shadow:var(--elevation)}
+.logo-card{border-radius:var(--radius-xl);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column}
+.logo-card:hover .logo-meta{background:var(--surface-hover)}
 .logo-preview{height:200px;display:flex;align-items:center;justify-content:center}
 .logo-preview.dark{background:var(--cosmos-wash)}.logo-preview.light{background:var(--cloud-white)}
 .logo-preview img{width:96px;height:96px;object-fit:contain}
-.logo-meta{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface)}
+.logo-meta{padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);transition:background .22s var(--ease)}
 .logo-meta .t{font-weight:600;font-size:15px}.logo-meta .s{font-size:13px;color:var(--text-muted)}
 .dl{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:var(--radius-pill);background:var(--cobalt-blue);color:#fff;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap;cursor:pointer;border:none;font-family:inherit;transition:transform .14s var(--ease),background .2s}
 .dl:hover{background:#3a51ff}.dl:active{transform:scale(.97)}
@@ -250,8 +246,8 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 /* ---------- Colors ---------- */
 .pal-label{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-muted);margin:0 0 16px}
 .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin-bottom:40px}
-.swatch{border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden;cursor:pointer;background:var(--surface);transition:transform .14s var(--ease),box-shadow .22s var(--ease);text-align:left;padding:0;font-family:inherit;color:inherit}
-.swatch:hover{transform:translateY(-3px);box-shadow:var(--elevation)}
+.swatch{border-radius:var(--radius-md);border:1px solid var(--border);overflow:hidden;cursor:pointer;background:var(--surface);transition:background .22s var(--ease);text-align:left;padding:0;font-family:inherit;color:inherit}
+.swatch:hover{background:var(--surface-hover)}
 .swatch .chip{height:88px;display:block;border-bottom:1px solid var(--border)}
 .swatch .info{padding:12px 14px}
 .swatch .name{font-size:13px;font-weight:600;display:block}
@@ -260,8 +256,8 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 /* ---------- Gradients ---------- */
 .grad-banner{height:140px;border-radius:var(--radius-lg);margin-bottom:26px;background:linear-gradient(120deg,#2D44E0,#6E1FC6,#B14FD0,#6E1FC6,#2D44E0);background-size:260% 100%;animation:shimmer 8s linear infinite;border:1px solid var(--border)}
 .grad-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-.grad-card{border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;cursor:pointer;background:var(--surface);padding:0;text-align:left;font-family:inherit;color:inherit;transition:box-shadow .22s var(--ease),transform .16s var(--ease)}
-.grad-card:hover{box-shadow:var(--elevation);transform:translateY(-3px)}
+.grad-card{border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;cursor:pointer;background:var(--surface);padding:0;text-align:left;font-family:inherit;color:inherit;transition:background .22s var(--ease)}
+.grad-card:hover{background:var(--surface-hover)}
 .grad-swatch{height:120px}
 .grad-info{padding:14px 16px}
 .grad-info .name{font-weight:600;font-size:15px}
@@ -279,8 +275,8 @@ section{padding:80px 0;border-bottom:1px solid var(--border)}
 
 /* ---------- Downloads ---------- */
 .dl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.dl-tile{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:var(--radius-md);border:1px solid var(--border);background:var(--surface);text-decoration:none;color:inherit;transition:transform .14s var(--ease),background .2s}
-.dl-tile:hover{background:var(--surface-hover);transform:translateY(-2px)}
+.dl-tile{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:var(--radius-md);border:1px solid var(--border);background:var(--surface);text-decoration:none;color:inherit;transition:background .2s}
+.dl-tile:hover{background:var(--surface-hover)}
 .dl-tile .ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--gradient-brand);flex-shrink:0;color:#fff;font-weight:700;font-size:15px}
 .dl-tile .ico svg{width:20px;height:20px}
 .dl-tile .t{font-weight:600;font-size:14px}
@@ -375,16 +371,16 @@ footer a{color:var(--text-secondary)}
         <h3>Badges</h3>
         <p class="cap">Status &amp; category pills across the accent spine</p>
         <div class="demo-row" style="margin-bottom:14px">
-          <span class="badge gradient"><span class="dot"></span>Live</span>
+          <span class="badge gradient">Live</span>
           <span class="badge cobalt">Cobalt</span>
           <span class="badge violet">Violet</span>
           <span class="badge magenta">Magenta</span>
           <span class="badge neutral">Neutral</span>
         </div>
         <div class="demo-row">
-          <span class="badge cobalt"><span class="dot"></span>Clear skies</span>
-          <span class="badge violet"><span class="dot"></span>New moon</span>
-          <span class="badge magenta"><span class="dot"></span>Meteor shower</span>
+          <span class="badge cobalt">Clear skies</span>
+          <span class="badge violet">New moon</span>
+          <span class="badge magenta">Meteor shower</span>
         </div>
       </div>
 
@@ -558,12 +554,12 @@ footer a{color:var(--text-secondary)}
       <a class="dl-tile" href="Celesnity Design System Gradient.zip" download>
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span>
         <span><span class="t">Full Design System</span><br><span class="s">Everything · .zip</span></span></a>
-      <a class="dl-tile" href="assets/tokens/colors.css" download><span class="ico">{ }</span><span><span class="t">colors.css</span><br><span class="s">Color tokens</span></span></a>
-      <a class="dl-tile" href="assets/tokens/typography.css" download><span class="ico">Aa</span><span><span class="t">typography.css</span><br><span class="s">Type tokens</span></span></a>
-      <a class="dl-tile" href="assets/tokens/spacing.css" download><span class="ico">{ }</span><span><span class="t">spacing.css</span><br><span class="s">Spacing &amp; radii</span></span></a>
-      <a class="dl-tile" href="assets/tokens/effects.css" download><span class="ico">{ }</span><span><span class="t">effects.css</span><br><span class="s">Shadows &amp; glow</span></span></a>
-      <a class="dl-tile" href="assets/tokens/fonts.css" download><span class="ico">Aa</span><span><span class="t">fonts.css</span><br><span class="s">Font import</span></span></a>
-      <a class="dl-tile" href="assets/styles.css" download><span class="ico">{ }</span><span><span class="t">styles.css</span><br><span class="s">Full stylesheet</span></span></a>
+      <a class="dl-tile" href="colors.zip" download><span class="ico">{ }</span><span><span class="t">colors.css</span><br><span class="s">Color tokens · .zip</span></span></a>
+      <a class="dl-tile" href="typography.zip" download><span class="ico">Aa</span><span><span class="t">typography.css</span><br><span class="s">Type tokens · .zip</span></span></a>
+      <a class="dl-tile" href="spacing.zip" download><span class="ico">{ }</span><span><span class="t">spacing.css</span><br><span class="s">Spacing &amp; radii · .zip</span></span></a>
+      <a class="dl-tile" href="effects.zip" download><span class="ico">{ }</span><span><span class="t">effects.css</span><br><span class="s">Shadows &amp; glow · .zip</span></span></a>
+      <a class="dl-tile" href="fonts.zip" download><span class="ico">Aa</span><span><span class="t">fonts.css</span><br><span class="s">Font import · .zip</span></span></a>
+      <a class="dl-tile" href="styles.zip" download><span class="ico">{ }</span><span><span class="t">styles.css</span><br><span class="s">Full stylesheet · .zip</span></span></a>
     </div>
   </div>
 </section>
